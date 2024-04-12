@@ -1,5 +1,6 @@
 package main
 
 func main() {
-	afunc()
+	newDemo1()
+	// makeDemo1()
 }

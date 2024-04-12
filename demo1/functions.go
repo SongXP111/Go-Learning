@@ -114,3 +114,20 @@ func afunc() {
 
 	fmt.Println(fn(2, 3))
 }
+
+// 递归
+func fn1(n int) int {
+	if n > 1 {
+		return n + fn1(n-1)
+	} else {
+		return 1
+	}
+}
+
+func fn3(n int) int {
+	if n > 1 {
+		return n * fn3(n-1)
+	} else {
+		return 1
+	}
+}
