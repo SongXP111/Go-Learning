@@ -11,6 +11,10 @@ import "fmt"
 type A interface {
 }
 
+type B struct {
+	Name string
+}
+
 // 可以当参数传入方法
 func show(a interface{}) {
 	fmt.Printf("value: %v, type: %T\n", a, a)
@@ -47,13 +51,57 @@ func interfaceDemo2() {
 	show(slice) */
 
 	// 可以作为map的value的类型
-	var m1 = make(map[string]interface{})
+	/* var m1 = make(map[string]interface{})
 	m1["username"] = "张三"
 	m1["age"] = 20
 	m1["married"] = false
-	fmt.Println(m1)
+	fmt.Println(m1) */
 
 	// 也可以放在切片里
-	var s1 = []interface{}{20, "hello Golang", true}
-	fmt.Println(s1)
+	/* var s1 = []interface{}{20, "hello Golang", true}
+	fmt.Println(s1) */
+
+	// 类型断言
+	// 经常结合switch语句使用
+	var a interface{}
+	a = "hello Golang"
+	v, ok := a.(string)
+	if ok {
+		fmt.Println("a就是string类型，值是: ", v)
+	} else {
+		fmt.Println("断言失败")
+	}
+}
+
+/*
+定义一个方法
+可以传入然后类型
+根据不同的类型实现不同的功能
+*/
+func MyPrint1(x interface{}) {
+	if _, ok := x.(string); ok {
+		fmt.Println("String")
+	} else if _, ok := x.(int); ok {
+		fmt.Println("Integer")
+	} else if _, ok := x.(bool); ok {
+		fmt.Println("Boolean")
+	} else {
+		fmt.Println("Unknown Type")
+	}
+}
+
+// x.(type)判断一个变量的类型，只能用在switch语句里面
+func MyPrint2(x interface{}) {
+	switch x.(type) {
+	case int:
+		fmt.Println("Integer")
+	case string:
+		fmt.Println("String")
+	case bool:
+		fmt.Println("Boolean")
+	case B:
+		fmt.Println("B struct") // 也可以判断结构体
+	default:
+		fmt.Println("Unsupported Type")
+	}
 }

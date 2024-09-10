@@ -46,8 +46,15 @@ type Computer struct {
 // 传入Phone或者Camera的实例
 // 相当于 var usb Usber = phone / camera
 func (c Computer) work(usb Usber) {
-	usb.start()
-	usb.stop()
+	// usb.start()
+	// usb.stop()
+
+	// 判断USB类型
+	if _, ok := usb.(Phone); ok {
+		usb.start()
+	} else {
+		usb.stop()
+	}
 }
 
 func interfaceDemo1() {
@@ -69,7 +76,7 @@ func interfaceDemo1() {
 
 	var computer = Computer{}
 	var phone = Phone{
-		Name: "小米",
+		Name: "小米手机",
 	}
 	var camera = Camera{}
 
