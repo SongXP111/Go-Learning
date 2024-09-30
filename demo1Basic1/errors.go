@@ -9,7 +9,7 @@ import (
 // recover：只能用在defer函数
 
 func panic1() {
-	fmt.Println("1")
+	fmt.Println("gin1")
 }
 
 func panic2() {

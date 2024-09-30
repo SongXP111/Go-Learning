@@ -10,7 +10,7 @@ import (
 // 用for循环实现
 // 利用goroutine
 // 用四个协程统计，每个统计30000个数字
-// start = (n - 1) * 30000 + 1, end = n * 30000
+// start = (n - gin1) * 30000 + gin1, end = n * 30000
 
 var wg sync.WaitGroup
 

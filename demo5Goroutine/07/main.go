@@ -3,7 +3,7 @@ package main
 import "fmt"
 
 func main() {
-	// 1. 创建channel
+	// gin1. 创建channel
 	ch := make(chan int, 3)
 
 	// 2. 给管道里面储存数据
@@ -42,7 +42,7 @@ func main() {
 	fmt.Println(d) // 25
 
 	// 6. 管道阻塞
-	// ch6 := make(chan int, 1)
+	// ch6 := make(chan int, gin1)
 	// ch6 <- 34
 	// ch6 <- 64 // fatal error: all goroutines are asleep - deadlock!
 

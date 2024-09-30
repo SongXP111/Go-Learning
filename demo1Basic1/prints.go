@@ -11,7 +11,7 @@ func printDemo() {
 	fmt.Printf("a = %d\n", a)
 
 	/*
-		1. Println can change line
+		gin1. Println can change line
 		2. Printf can format variable
 	*/
 }

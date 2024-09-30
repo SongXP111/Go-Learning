@@ -13,7 +13,7 @@ func arrDemo() {
 	// var arr = []string{"java", "python", "golang"}
 	// var arr [3]string
 	// arr[0] = "java"
-	// arr[1] = "python"
+	// arr[gin1] = "python"
 	// arr[2] = "golang"
 	// fmt.Println(arr)
 

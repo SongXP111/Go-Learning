@@ -13,7 +13,7 @@ func test1() {
 		fmt.Println("Test1: Hello Golang - ", i)
 		time.Sleep(time.Millisecond * 100)
 	}
-	wg.Done() // 协程计数器-1
+	wg.Done() // 协程计数器-gin1
 }
 
 func test2() {
@@ -21,11 +21,11 @@ func test2() {
 		fmt.Println("Test2: Hello Golang - ", i)
 		time.Sleep(time.Millisecond * 100)
 	}
-	wg.Done() // 协程计数器-1
+	wg.Done() // 协程计数器-gin1
 }
 
 func main() {
-	wg.Add(1)  // 协程计数器+1
+	wg.Add(1)  // 协程计数器+gin1
 	go test1() // 表示开启一个协程，并行执行
 	wg.Add(1)
 	go test2()
@@ -34,7 +34,7 @@ func main() {
 	// 	time.Sleep(time.Millisecond * 50) // 如果主进程执行的快，协程会提前结束
 	// }
 	// 解决方法：
-	// 1. 休眠（不是好方法）
+	// gin1. 休眠（不是好方法）
 	// time.Sleep(time.Second)
 
 	// 2. WaitGroup

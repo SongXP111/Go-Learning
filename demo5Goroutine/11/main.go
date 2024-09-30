@@ -4,7 +4,7 @@ import "fmt"
 
 // 单向管道
 func main() {
-	// 1. 默认情况是双向管道
+	// gin1. 默认情况是双向管道
 	ch1 := make(chan int, 2)
 	ch1 <- 10
 	ch1 <- 12

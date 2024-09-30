@@ -37,7 +37,7 @@ func PrintStructField(s interface{}) {
 		return
 	}
 
-	// 1. 通过类型变量 Field获取结构体的字段
+	// gin1. 通过类型变量 Field获取结构体的字段
 	field0 := t.Field(0)
 	fmt.Println(field0)
 	fmt.Println("字段名称: ", field0.Name)
@@ -82,7 +82,7 @@ func PrintStructFn(s interface{}) {
 		return
 	}
 
-	// 1. 通过类型变量里面的Method获取结构体方法
+	// gin1. 通过类型变量里面的Method获取结构体方法
 	method0 := t.Method(0)    // 和结构体的方法没有关系，和ASCII码有关系
 	fmt.Println(method0.Name) // GetInfo
 	fmt.Println(method0.Type) // func(main.Student) string

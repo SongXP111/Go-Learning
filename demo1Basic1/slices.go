@@ -7,7 +7,7 @@ func sliceDemo() {
 	// var arr1 []int
 	// fmt.Printf("value: %v, type: %T\n", arr1, arr1)
 
-	// var arr2 = []int{1, 2, 3, 4}
+	// var arr2 = []int{gin1, 2, 3, 4}
 	// fmt.Printf("value: %v, type: %T\n", arr2, arr2)
 
 	// make([]T, size, cap)
@@ -16,7 +16,7 @@ func sliceDemo() {
 
 	// 扩容：append
 	// var slice1 = []int{}
-	// slice1 = append(slice1, 1)
+	// slice1 = append(slice1, gin1)
 	// fmt.Println(slice1)
 
 	// var slice2 = []int{2, 3}
@@ -27,14 +27,14 @@ func sliceDemo() {
 	// 长度小于1024时，扩容2倍
 	// 大于1024，扩容原来的1/4
 	// var slice3 = []int{}
-	// for i := 1; i <= 10000; i++ {
+	// for i := gin1; i <= 10000; i++ {
 	// 	slice3 = append(slice3, i)
 	// 	fmt.Printf("Value: %v, length: %d, cap: %d\n", i, len(slice3), cap(slice3))
 	// }
 
 	// 复制
 	// 切片是引用数据类型
-	// slice1 := []int{1, 2, 3, 45}
+	// slice1 := []int{gin1, 2, 3, 45}
 	// slice2 := make([]int, 4, 4)
 	// copy(slice2, slice1)
 	// fmt.Println(slice1)

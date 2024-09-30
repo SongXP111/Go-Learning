@@ -17,7 +17,7 @@ func main() {
 
 	// 写入文件
 
-	// 1. WriteString
+	// gin1. WriteString
 	//for i := 0; i < 10; i++ {
 	//	file.WriteString("饮必甘露，食必嘉禾。循循如仪，不罹罗网 - " + strconv.Itoa(i) + "\r\n")
 	//}

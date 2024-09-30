@@ -13,7 +13,7 @@ func makeDemo1() {
 	// fmt.Println(userinfo)
 
 	// var a = make([]int, 4)
-	// a[0] = 1
+	// a[0] = gin1
 	// fmt.Println(a)
 
 	var a = new(int) // pointer也是引用数据类型

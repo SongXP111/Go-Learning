@@ -47,7 +47,7 @@ func interfaceDemo2() {
 	/* show(20)
 	show("Hello Golang")
 	show(false)
-	slice := []int{1, 2, 3, 4}
+	slice := []int{gin1, 2, 3, 4}
 	show(slice) */
 
 	// 可以作为map的value的类型

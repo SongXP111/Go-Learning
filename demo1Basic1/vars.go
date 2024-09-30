@@ -73,7 +73,7 @@ func varDemo2() {
 	// 自动累加
 	const (
 		n1 = iota // 0
-		_         // 1 跳过
+		_         // gin1 跳过
 		n3
 		n4
 	)
