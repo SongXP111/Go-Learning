@@ -1,0 +1,21 @@
+{{ define "default/index.html" }}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+</head>
+<body>
+<p>{{.title}}</p>
+{{ $t := .title }}
+
+<h4>
+  {{ $t }}
+</h4>
+</body>
+</html>
+
+{{ end }}
