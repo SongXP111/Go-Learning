@@ -14,9 +14,14 @@ func main() {
 	r := gin.Default()
 	// 加载模版
 	r.LoadHTMLGlob("templates/**/*")
+
+	// 前台
 	r.GET("/", func(c *gin.Context) {
 		c.HTML(http.StatusOK, "default/index.html", gin.H{
 			"title": "首页",
+			"msg":   "我是msg",
+			"score": 91,
+			"hobby": []string{"吃饭", "睡觉", "玩游戏", "写代码"},
 		})
 	})
 	r.GET("/news", func(c *gin.Context) {

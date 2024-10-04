@@ -14,6 +14,24 @@
 
 <h4>
   {{ $t }}
+
+  {{if ge .score 60}}
+  <p>及格</p>
+  {{else}}
+  <p>不及格</p>
+  {{end}}
+
+  {{if gt .score 90}}
+  <p>优秀</p>
+  {{else if gt .score 80}}
+  <p>良好</p>
+  {{else if gt .score 60}}
+  <p>及格</p>
+  {{else}}
+  <p>不及格</p>
+  {{end}}
+
+
 </h4>
 </body>
 </html>
