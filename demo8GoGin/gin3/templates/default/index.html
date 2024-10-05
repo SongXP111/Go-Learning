@@ -31,7 +31,37 @@
   <p>不及格</p>
   {{end}}
 
+  <br>
+  <ul>
+    {{ range $key, $value := .hobby }}
+    <li> {{$key}}: {{$value}} </li>
+    {{end}}
+  </ul>
 
+  <br>
+  <ul>
+    {{ range $key, $value := .newsList }}
+    <li> {{$key}} --- {{$value.Title}} --- {{$value.Content}} </li>
+    {{end}}
+  </ul>
+
+  <br>
+  <ul>
+    {{ range $key, $value := .testSlice }}
+    <li> {{$key}}: {{$value}} </li>
+    {{else}}
+    <li> 数组没有数据 </li>
+    {{end}}
+  </ul>
+
+<!--  with结构体-->
+  <p>{{.news.Title}} </p>
+  <p>{{.news.Content}} </p>
+
+  {{with .news}}
+  <p>{{.Title}}</p>
+  <p>{{.Content}}</p>
+  {{end}}
 </h4>
 </body>
 </html>
