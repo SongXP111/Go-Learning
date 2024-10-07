@@ -1,0 +1,94 @@
+{{ define "default/index.html" }}
+
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+  <link rel="stylesheet" href="static/css/base.css">
+</head>
+<body>
+
+{{template "public/page_header.html" .}}
+<p>{{.title}}</p>
+{{ $t := .title }}
+
+<h2>aaa</h2>
+<h4>
+  {{ $t }}
+
+  {{if ge .score 60}}
+  <p>及格</p>
+  {{else}}
+  <p>不及格</p>
+  {{end}}
+
+  {{if gt .score 90}}
+  <p>优秀</p>
+  {{else if gt .score 80}}
+  <p>良好</p>
+  {{else if gt .score 60}}
+  <p>及格</p>
+  {{else}}
+  <p>不及格</p>
+  {{end}}
+
+  <br>
+  <ul>
+    {{ range $key, $value := .hobby }}
+    <li> {{$key}}: {{$value}} </li>
+    {{end}}
+  </ul>
+
+  <br>
+  <ul>
+    {{ range $key, $value := .newsList }}
+    <li> {{$key}} --- {{$value.Title}} --- {{$value.Content}} </li>
+    {{end}}
+  </ul>
+
+  <br>
+  <ul>
+    {{ range $key, $value := .testSlice }}
+    <li> {{$key}}: {{$value}} </li>
+    {{else}}
+    <li> 数组没有数据 </li>
+    {{end}}
+  </ul>
+
+<!--  with结构体-->
+  <p>{{.news.Title}} </p>
+  <p>{{.news.Content}} </p>
+
+  {{with .news}}
+  <p>{{.Title}}</p>
+  <p>{{.Content}}</p>
+  {{end}}
+
+<!--  预定义函数-->
+  <br>
+  {{len .title}}
+
+<!--  自定义模板函数-->
+  <br>
+  {{.date}}
+
+  <br>
+  {{UnixToTime .date}}
+
+  <br>
+  <br>
+
+  {{Println .title .msg}}
+
+
+</h4>
+
+{{template "public/page_footer.html" .}}
+
+</body>
+</html>
+
+{{ end }}
