@@ -1,4 +1,4 @@
-module gin3
+module gin4
 
 go 1.22.1
 

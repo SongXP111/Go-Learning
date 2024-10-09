@@ -1,7 +1,7 @@
 package main
 
 import (
-	"gin3/routers"
+	"gin6/routers"
 	"html/template"
 	"time"
 
