@@ -1,8 +1,8 @@
 package main
 
 import (
+	"gin3/routers"
 	"html/template"
-	"net/http"
 	"time"
 
 	"github.com/gin-gonic/gin"
@@ -23,12 +23,13 @@ func main() {
 	// 加载模版
 	r.LoadHTMLGlob("templates/**/*")
 
-	// 静态服务
+	// 配置静态web目录 静态服务
 	r.Static("/static", "./static")
 
-	r.GET("/", func(c *gin.Context) {
-		c.String(http.StatusOK, "首页")
-	})
+	// 抽离路由配置
+	routers.AdminRoutersInit(r)
+	routers.ApiRoutersInit(r)
+	routers.DefaultRoutersInit(r)
 
 	r.Run(":8080")
 }
