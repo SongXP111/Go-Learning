@@ -44,7 +44,7 @@ func main() {
 
 	r.GET("/", initMiddleware, func(c *gin.Context) {
 		fmt.Println("这是一个首页")
-		time.Sleep(time.Second)
+		// time.Sleep(time.Second)
 		c.String(200, "gin首页")
 	})
 
