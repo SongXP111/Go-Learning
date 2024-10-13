@@ -2,13 +2,14 @@ package routers
 
 import (
 	"gin7/controllers/admin"
+	"gin7/middlewares"
 
 	"github.com/gin-gonic/gin"
 )
 
 // 首字母大写代表公有方法
 func AdminRoutersInit(r *gin.Engine) {
-	adminRouters := r.Group("/admin")
+	adminRouters := r.Group("/admin", middlewares.InitMiddleware)
 	{
 		adminRouters.GET("/", admin.IndexController{}.Index)
 
