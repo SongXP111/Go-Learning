@@ -1,0 +1,34 @@
+{{ define "admin/useradd.html" }}
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Document</title>
+</head>
+<body>
+<!-- <h2>演示：单文件上传</h2>
+<form action="/admin/user/doUpload" method="post" enctype="multipart/form-data">
+    用户名：<input type="text" name="username" placeholder="用户名">
+    <br>
+    <br>
+    头像：<input type="file" name="face">
+    <br>
+    <br>
+    <input type="submit" value="提交">
+</form> -->
+<h2>演示：文件上传</h2>
+<form action="/admin/user/doUpload" method="post" enctype="multipart/form-data">
+    用户名：<input type="text" name="username" placeholder="用户名">
+    <br>
+    <br>
+    头像：<input type="file" name="face">
+    <br>
+    <br>
+    <input type="submit" value="提交">
+</form>
+</body>
+</html>
+
+{{ end }}
